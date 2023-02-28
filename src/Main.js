@@ -8,15 +8,17 @@ class Main extends React.Component {
     return (
       <main>
   <Hornedbeast 
-  title="title"
-  imageUrl="url"
-  description="description"
-  name="Mohammed"/>
+  title="Ephesto"
+  imageUrl="images/Ephesto.jpeg"
+  description="Luchador"
+  // name="Mohammed"
+  />
   <Hornedbeast 
-  title="title"
-  imageUrl="url"
-  description="description"
-  name="Fahim"/>
+  title="Rhino"
+  imageUrl="images/Rhino.jpeg"
+  description="GOOORE"
+  // name="Fahim"
+  />
 
 
   </main>
