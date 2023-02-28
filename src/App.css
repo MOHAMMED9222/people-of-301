@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(255, 237, 205);
+  background-color:coral;
 }
 /* use classes more than id's in react. React components are meant to be reused.
 */
