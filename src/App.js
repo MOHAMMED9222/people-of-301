@@ -2,13 +2,17 @@ import React from 'react';
 import Main from './Main';
 import './App.css';
 
+
 class App extends React.Component {
+  // inside render is the html jtsx
   render() {
   return (
+    // wrap for no sibling elements
   <>
-  <header><h1>People of 301</h1></header>
- <Main/>
-  <footer>&copy; D R A K O</footer>
+  <header><h1>Horned Beasts of Wrestling</h1></header>
+<Main/>
+
+
   </>)
  }
 }
