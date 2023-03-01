@@ -1,6 +1,6 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
 import './Hornedbeast.css'
+import Card from 'react-bootstrap/Card';
 
 
 class Hornedbeast extends React.Component {
@@ -8,43 +8,30 @@ class Hornedbeast extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      waves:0,
-      helpMe: false
+      likes: 0
     };
   }
-  handlewaves = () =>{
+  handleLikes = () => {
     // when the user clicks on "Say Hello" update the value of this.state.waves
     this.setState({
-      waves: this.state.waves +1
+      likes: this.state.likes + 1
     });
   }
 
-  needsHelp = () => {
-    this.setState({
-      helpMe: true
-    })
-  }
-
-  gotHelp = () => {
-    this.setState({
-      helpMe: false
-    })
-  }
   render() {
     // console.log(this.props.name)
     return (
-      <main>
-    <article className="person">
-    <h3>{this.props.title}</h3>
-    <p>{this.props.waves} greetings</p>
-    <p onClick={this.handlewaves}>Say Hello!</p>
-    <p>{this.props.description}</p>
-    <img src={this.props.imageUrl} alt= {this.props.description}></img>
-    <div>{this.state.helpMe ? 'I need help!' : ''}</div>
-    <Button onClick={this.needsHelp}>Need Help</Button>
-    <button onClick={this.gotHelp}>Find Help</button>
-  </article>
-  </main>
+      <Card>
+        <Card style={{ width: '18rem' }}></Card>
+        <article className="person">
+          <h3>{this.props.name}</h3>
+          <p>🖤{this.props.likes}</p>
+          <p onClick={this.handleLikes}>likes!</p>
+          <img src={this.props.imageUrl} alt={this.props.description}></img>
+          <p>{this.props.description}</p>
+          <p>{this.props.horns}</p>
+        </article>
+      </Card>
     )
   };
 }
