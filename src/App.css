@@ -3,4 +3,21 @@ body {
 }
 /* use classes more than id's in react. React components are meant to be reused.
 */
+h1 {
+  font-size: 10vw;
+}
 
+.modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-body img {
+  display: block;
+  height: auto;
+  width: auto;
+  max-width: 20rem;
+  min-height: 27rem;
+}

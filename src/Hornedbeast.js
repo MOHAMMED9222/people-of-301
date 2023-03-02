@@ -1,6 +1,6 @@
 import React from "react";
 import './Hornedbeast.css'
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap/Card';
 
 
 class Hornedbeast extends React.Component {
@@ -11,6 +11,7 @@ class Hornedbeast extends React.Component {
       likes: 0
     };
   }
+
   handleLikes = () => {
     // when the user clicks on "Say Hello" update the value of this.state.waves
     this.setState({
@@ -18,20 +19,28 @@ class Hornedbeast extends React.Component {
     });
   }
 
+  handleHeaderClick = () => {
+    this.props.handleOpenModal(this.props.title, this.props.imageUrl, this.props.description);
+  }
+
   render() {
     // console.log(this.props.name)
     return (
-      <Card>
-        <Card style={{ width: '18rem' }}></Card>
-        <article className="person">
-          <h3>{this.props.name}</h3>
-          <p>🖤{this.props.likes}</p>
-          <p onClick={this.handleLikes}>likes!</p>
-          <img src={this.props.imageUrl} alt={this.props.description}></img>
-          <p>{this.props.description}</p>
-          <p>{this.props.horns}</p>
-        </article>
-      </Card>
+
+
+      <article className="person">
+        <h2>{this.props.title}</h2>
+        <h3>{this.props.description}</h3>
+        <p>🖤{this.state.likes}</p>
+        <p onClick={this.handleLikes}>Thanks, I like you too!</p>
+        <img
+          src={this.props.imageUrl}
+          alt={this.props.name}
+          onClick={this.handleHeaderClick}
+        />
+        <p>description={this.props.description}</p>
+      </article>
+
     )
   };
 }
