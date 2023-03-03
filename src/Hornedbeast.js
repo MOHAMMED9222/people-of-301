@@ -13,6 +13,7 @@ class Hornedbeast extends React.Component {
   }
 
   handleLikes = () => {
+  
     // when the user clicks on "Say Hello" update the value of this.state.waves
     this.setState({
       likes: this.state.likes + 1

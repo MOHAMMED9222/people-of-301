@@ -14,6 +14,7 @@ class Main extends React.Component {
           description={beast.description}
           handleOpenModal={this.props.handleOpenModal}
           key={idx}
+          horns={beast.horn}
         />
       )
     });
