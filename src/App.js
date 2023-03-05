@@ -6,7 +6,6 @@ import data from './data.json';
 import Modal from 'react-bootstrap/Modal';
 import './App.css';
 import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button';
 import SelectedBeast from './SelectedBeast';
 
 
@@ -44,22 +43,22 @@ class App extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     let picked = event.target.value;
-    if (picked === 'One') {
+    if (picked === '1') {
       let newData = data.filter(num => num.horns === 1);
       this.setState({
         sortedData: newData
       });
-    } else if (picked === 'Two') {
+    } else if (picked === '2') {
       let newData = data.filter(num => num.horns === 2);
       this.setState({
         sortedData: newData
       });
-    } else if (picked === 'Three') {
+    } else if (picked === '3') {
       let newData = data.filter(num => num.horns === 3);
       this.setState({
         sortedData: newData
       });
-    } else if (picked === 'One-Hundred') {
+    } else if (picked === '100') {
       let newData = data.filter(num => num.horns === 100);
       this.setState({
         sortedData: newData
@@ -84,13 +83,16 @@ class App extends React.Component {
             </Form.Select>
 
           </Form>
-          <Main data={data} handleOpenModal={this.handleOpenModal} />
+          <Main data={this.state.sortedData} handleOpenModal={this.handleOpenModal} />
 
           <SelectedBeast
+          data={this.state.sortedData}
          showModal = {this.state.showModal}
+         handleCloseModal= {this.handleCloseModal}
          title = {this.state.title}
          img = {this.state.url}
          description = {this.state.title}></SelectedBeast>
+
           
           <Footer />
           <Modal

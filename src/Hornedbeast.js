@@ -13,7 +13,7 @@ class Hornedbeast extends React.Component {
   }
 
   handleLikes = () => {
-  
+
     // when the user clicks on "Say Hello" update the value of this.state.waves
     this.setState({
       likes: this.state.likes + 1
@@ -21,7 +21,7 @@ class Hornedbeast extends React.Component {
   }
 
   handleHeaderClick = () => {
- 
+    this.handleLikes();
     this.props.handleOpenModal(this.props.title, this.props.imageUrl, this.props.description);
   }
 
