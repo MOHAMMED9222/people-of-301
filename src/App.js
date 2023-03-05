@@ -6,6 +6,9 @@ import data from './data.json';
 import Modal from 'react-bootstrap/Modal';
 import './App.css';
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button';
+import SelectedBeast from './SelectedBeast';
+
 
 
 class App extends React.Component {
@@ -16,12 +19,14 @@ class App extends React.Component {
       title: '',
       url: '',
       description: '',
+      data: data,
+      sortedData: data,
     }
   }
 
   handleCloseModal = () => {
     this.setState({
-      showModal: false
+      showModal: false,
     });
   }
 
@@ -31,8 +36,10 @@ class App extends React.Component {
       title: title,
       url: imageUrl,
       description: description,
+      
     });
   }
+
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -60,6 +67,8 @@ class App extends React.Component {
     }
   }
 
+  
+
     render() {
       return (
         // wrap for no sibling elements
@@ -76,6 +85,13 @@ class App extends React.Component {
 
           </Form>
           <Main data={data} handleOpenModal={this.handleOpenModal} />
+
+          <SelectedBeast
+         showModal = {this.state.showModal}
+         title = {this.state.title}
+         img = {this.state.url}
+         description = {this.state.title}></SelectedBeast>
+          
           <Footer />
           <Modal
             show={this.state.showModal}
