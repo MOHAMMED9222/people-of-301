@@ -4,3 +4,14 @@ main {
   justify-content: space-around;
 }
 
+article.person {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+img {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
