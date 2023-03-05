@@ -63,6 +63,11 @@ class App extends React.Component {
       this.setState({
         sortedData: newData
       });
+    } else if (picked === 'All') {
+      //let newData = data.filter(num => num.horns === 'All');
+      this.setState({
+        sortedData: data});
+
     }
   }
 
@@ -80,6 +85,8 @@ class App extends React.Component {
               <option value="2">Two</option>
               <option value="3">Three</option>
               <option value="100">One-Hundred</option>
+              <option value="All">All</option>
+
             </Form.Select>
 
           </Form>

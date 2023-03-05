@@ -1,5 +1,7 @@
 import React from "react";
 import './Hornedbeast.css'
+import Button from 'react-bootstrap/Button';
+
 // import Card from 'react-bootstrap/Card';
 
 
@@ -33,14 +35,13 @@ class Hornedbeast extends React.Component {
       <article className="person">
         <h2>{this.props.title}</h2>
         <h3>{this.props.description}</h3>
-        <p>🖤{this.state.likes}</p>
-        <p onClick={this.handleLikes}>Thanks, I like you too!</p>
+        <Button className= 'likes' variant="warning">🖤{this.state.likes}</Button>{' '}
         <img
           src={this.props.imageUrl}
           alt={this.props.name}
           onClick={this.handleHeaderClick}
         />
-        <p>description={this.props.description}</p>
+        <Button className= 'handle' variant="warning" onClick={this.handleLikes}>Touch Me, Im So Horn </Button>{' '}
       </article>
 
     )
@@ -48,3 +49,4 @@ class Hornedbeast extends React.Component {
 }
 
 export default Hornedbeast;
+

@@ -1,10 +1,10 @@
 
 
 .person {
-  border: 1px solid green;
+  border: 1px solid teal;
   padding: 1vw;
   margin-bottom: 1vw;
-  background-color: aquamarine;
+  background-color: teal;
   border-radius: 15px;
   width: 19%;
 }
@@ -13,7 +13,7 @@
   font-family:'Times New Roman', Times, serif;
   font-weight: bold;
   text-align: center;
-  color: red;
+  color: gold;
   border: white;
   border-radius: 6px;
 }
@@ -21,8 +21,8 @@
 .person h3 {
   font-size: 15px;
   text-align: center;
-  border: 1px solid green;
-  background-color: white;
+  border: 1px solid teal;
+  background-color: magenta;
   border-radius: 6px;
 }
 
@@ -36,4 +36,9 @@
   margin: auto;
   display: inline-block;
   margin-bottom: .5rem;
+}
+
+button .handle {
+  display: block;
+  margin-bottom: 2rem;
 }
